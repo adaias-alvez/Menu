@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'consola', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #00ffd5cc;
+}
+ul{
+    position: relative;
+    padding: 20px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 0px 10px rgb(0, 0, 0);
+    background: whitesmoke;
+}
+ul li{
+    position: relative;
+    list-style: none;
+}
+ul li::before{
+    font-family: fontAwesome;
+    content: '\f111';
+    position: absolute;
+    top: 26px;
+    right: 10px;
+}
+ul li:hover::before{
+    background: none;
+    content: '\f10c';
+    font-family: fontAwesome;
+    color: #0099ff;
+}
+ul li a{
+    text-decoration: none;
+    display: flex;
+    color: #0099ff;
+}
+ul li a .icon{
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    overflow: hidden;
+    margin: 10px;
+}
+ul li a .icon .fa{
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    font-size: 34px;
+    color: #000;
+    transition: 0.5s;
+}
+ul li a .icon .fa:last-child{
+     color: #0099ff;
+}
+ul li a:hover .icon .fa{
+     transform: translateY(-100%);
+}
+ul li a:hover .icon .fa:last-child{
+     transform: translateY(-100%);
+}
+ul li .name{
+    position: relative;
+    top: 20px;
+    height: 20px;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+ul li a .name span{
+    display: block;
+    position: relative;
+    color: #000;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    transition: .5s;
+}
+ul li a .name span::before{
+    content: attr(data-text);
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #0099ff;
+}
+ul li a:hover .name span{
+    transform: translateY(20px);
+}
